@@ -1,0 +1,104 @@
+section{
+    position: relative;
+}
+
+.section-1{
+    height: 95%;
+    background-image: url('Images/Layer-R.png'), linear-gradient(40deg, #2d3a44 -10%, #020304 80%);
+    background-repeat: no-repeat;
+    background-position: right -10% bottom -10vw, 0% 0%;
+    background-size: 40vw, auto;
+    overflow: hidden;
+}
+
+.box{
+    position: absolute;
+    top: -7vw;
+    left: -15%;
+    height: 50vw;
+    width: 50vw;
+    background: linear-gradient(130deg, #020304, #2d3a44);
+    border-radius: 20%;
+    transform: rotate(-25deg);
+}
+
+.banner{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 40%;
+}
+
+.banner>a{
+    margin-right: 5%;
+}
+
+.banner svg{
+    height: 1rem;
+    transform: translate(10%, 20%);
+}
+
+@media only screen and (orientation: portrait) {
+    .section-1{
+        background-size: 40vh, auto;
+        background-position: right -10% top 20%, 0% 0%;
+    }
+    .box{
+        height: 50vh;
+        width: 50vh;
+        top: auto;
+        bottom: -10vw;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 425px) {
+    .section-1{
+        background-position: right -10vh top 20%, 0% 0%;
+    }
+    .box{
+        left: -20vh;
+    }
+    .banner{
+        width: 75%;
+    }
+}
+
+#youtube:hover:not(:focus) .path-cls { fill: red; }
+#instagram:hover:not(:focus) .path-cls { fill: url(#insta-linear-grad); }
+#tiktok:hover:not(:focus) #blu-path { fill: #25f4ee; }
+#tiktok:hover:not(:focus) #red-path { fill: #fe2c55; }
+#tiktok:hover:not(:focus) #blc-path { fill: #ffffff; }
+
+.waves {
+    position: absolute;
+    bottom: -10px;
+    pointer-events: none;
+    width: 100%;
+}
+
+.section-2 {
+    background-color: gray;
+}
+
+.section-3 {
+    background-color: skyblue;
+}
+
+section:nth-child(even)>article {
+    flex-direction: row-reverse;
+}
+
+article {
+    width: min(800px, 70vw);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    column-gap: 4vw;
+}
+
+article>div {
+    flex-grow: 1;
+}
