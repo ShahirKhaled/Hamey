@@ -18,3 +18,14 @@ document.querySelectorAll('.collapsible-list-item>a').forEach(element => {
         else collapsibleList.style.height = collapsibleList.scrollHeight + "px";
     });
 });
+
+console.log(
+    `%cHi there!
+%cSince you have came here, I assume that you are a developer.
+If you want to get in touch, I would love to connect with you
+%cGitHub: %chttps://www.github.com/Shahir-Khaled`,
+    'font-size: 2em; color: rgb(101, 197, 255); width: 100%; text-align: center;',
+    '',
+    'font-weight: bold;',
+    ''
+);
